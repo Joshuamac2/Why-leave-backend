@@ -29,6 +29,13 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'travis', '~> 1.8', '>= 1.8.8'
+  gem 'simplecov', '~> 0.20.0'
+  gem 'simplecov-console', '~> 0.8.0'
+  gem 'rubocop', '~> 1.5', '>= 1.5.2'
+  gem 'rubocop-rails', '~> 2.9'
+  gem 'rubocop-rspec', '~> 2.0', '>= 2.0.1'
+  gem 'rspec', '~> 3.10'
+
 end
 
 group :development do
