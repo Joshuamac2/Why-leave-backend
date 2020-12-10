@@ -1706,3 +1706,72 @@ Processing by CountriesController#index as HTML
 Completed 200 OK in 42ms (Views: 26.7ms | ActiveRecord: 13.3ms | Allocations: 10173)
 
 
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCountry Create (4.5ms)[0m  [1m[32mINSERT INTO "countries" ("country", "country_code", "population", "refugees", "asylum_seekers", "latitude", "longitude") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["country", "Syrian Arab Republic"], ["country_code", "SYR"], ["population", 16900000], ["refugees", 6596627], ["asylum_seekers", 107621], ["latitude", 35.0], ["longitude", 38.0]]
+  [1m[35m (21.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (13.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCause Create (4.0ms)[0m  [1m[32mINSERT INTO "causes" ("description", "date_started", "country_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["description", "Over 5.6 million refugees have fled Syria since 2011, seeking safety in Turkey, Lebanon, Jordan, Iraq, Egypt and beyond. After almost six years of war in Syria, refugee vulnerabilities and poverty are on the rise, the impact on host communities continues to grow, and funding for the humanitarian response is not keeping up with the needs"], ["date_started", "2011"], ["country_id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2020-12-10 11:18:18 +0000
+  [1m[35m (29.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/maiara/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/maiara/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 28.7ms | Allocations: 293)
+Completed 200 OK in 263ms (Views: 38.9ms | ActiveRecord: 0.0ms | Allocations: 1534)
+
+
+Started GET "/countries" for ::1 at 2020-12-10 11:18:25 +0000
+Processing by CountriesController#index as HTML
+  [1m[36mCountry Load (72.8ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:5:in `index'
+  [1m[36mCause Load (2.0ms)[0m  [1m[34mSELECT "causes".* FROM "causes" WHERE "causes"."country_id" = $1[0m  [["country_id", 1]]
+  ↳ app/controllers/countries_controller.rb:5:in `index'
+Completed 200 OK in 819ms (Views: 159.3ms | ActiveRecord: 642.4ms | Allocations: 15141)
+
+
+Started GET "/countries/1" for ::1 at 2020-12-10 11:29:51 +0000
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCountry Load (1.0ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:23:in `show'
+Completed 200 OK in 30ms (Views: 3.2ms | ActiveRecord: 13.3ms | Allocations: 990)
+
+
+Started GET "/countries/" for ::1 at 2020-12-10 11:30:05 +0000
+Processing by CountriesController#index as HTML
+  [1m[36mCountry Load (91.8ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:5:in `index'
+  [1m[36mCause Load (1.2ms)[0m  [1m[34mSELECT "causes".* FROM "causes" WHERE "causes"."country_id" = $1[0m  [["country_id", 1]]
+  ↳ app/controllers/countries_controller.rb:5:in `index'
+Completed 200 OK in 156ms (Views: 62.0ms | ActiveRecord: 93.1ms | Allocations: 2014)
+
+
+Started GET "/countries/1" for ::1 at 2020-12-10 11:30:14 +0000
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCountry Load (0.4ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:23:in `show'
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 722)
+
+
+Started GET "/countries/1" for ::1 at 2020-12-10 11:31:12 +0000
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCountry Load (21.2ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:23:in `show'
+  [1m[36mCause Load (0.5ms)[0m  [1m[34mSELECT "causes".* FROM "causes" WHERE "causes"."country_id" = $1[0m  [["country_id", 1]]
+  ↳ app/controllers/countries_controller.rb:24:in `show'
+Completed 200 OK in 264ms (Views: 87.9ms | ActiveRecord: 57.4ms | Allocations: 10147)
+
+
+Started GET "/countries/1" for ::1 at 2020-12-10 11:31:29 +0000
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCountry Load (33.3ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:23:in `show'
+  [1m[36mCause Load (40.5ms)[0m  [1m[34mSELECT "causes".* FROM "causes" WHERE "causes"."country_id" = $1[0m  [["country_id", 1]]
+  ↳ app/controllers/countries_controller.rb:24:in `show'
+Completed 200 OK in 98ms (Views: 12.6ms | ActiveRecord: 73.8ms | Allocations: 1743)
+
+
