@@ -1,6 +1,10 @@
 # Why Leave?
 
-# User Stories
+
+
+
+# User Stories 
+
 ```
 As a user,
 So that I can see the world
@@ -59,4 +63,7 @@ rspec
 ## To run lining:
 ```
 rubocop
+
 ```
+
+

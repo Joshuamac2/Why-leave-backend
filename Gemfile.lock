@@ -201,6 +201,15 @@ GEM
       terminal-table
     simplecov-html (0.12.3)
     simplecov_json_formatter (0.1.2)
+    rspec-rails (4.0.1)
+      actionpack (>= 4.2)
+      activesupport (>= 4.2)
+      railties (>= 4.2)
+      rspec-core (~> 3.9)
+      rspec-expectations (~> 3.9)
+      rspec-mocks (~> 3.9)
+      rspec-support (~> 3.9)
+    rspec-support (3.10.0)
     spring (2.1.1)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -252,6 +261,7 @@ DEPENDENCIES
   rubocop-rspec (~> 2.0, >= 2.0.1)
   simplecov (~> 0.20.0)
   simplecov-console (~> 0.8.0)
+  rspec-rails
   spring
   spring-watcher-listen (~> 2.0.0)
   travis (~> 1.8, >= 1.8.8)
