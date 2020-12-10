@@ -1,7 +1,16 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+
+syria = Country.create(
+  country: "Syrian Arab Republic",
+  country_code: "SYR",
+  population: 16900000,
+  refugees: 6596627,
+  asylum_seekers: 107621,
+  latitude: 35,
+  longitude: 38
+  )
+  
+  syria_cause = Cause.create(
+    description: "Over 5.6 million refugees have fled Syria since 2011, seeking safety in Turkey, Lebanon, Jordan, Iraq, Egypt and beyond. After almost six years of war in Syria, refugee vulnerabilities and poverty are on the rise, the impact on host communities continues to grow, and funding for the humanitarian response is not keeping up with the needs",
+    date_started: "2011",
+    country: syria
+  )

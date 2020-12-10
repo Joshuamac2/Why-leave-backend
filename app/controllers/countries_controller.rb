@@ -1,8 +1,8 @@
-class CountryController < ApplicationController
+class CountriesController < ApplicationController
   
   def index 
     @countries = Country.all
-    render json: @countries
+    render json: @countries, include: [:causes]
   end 
 
   def create

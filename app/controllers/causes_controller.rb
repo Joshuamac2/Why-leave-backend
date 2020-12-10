@@ -1,4 +1,4 @@
-class CauseController < ApplicationController
+class CausesController < ApplicationController
 
   def index
     @causes = Cause.all
