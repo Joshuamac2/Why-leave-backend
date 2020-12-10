@@ -1,24 +1,62 @@
-# README
+# Why Leave?
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# User Stories 
+```
+As a user,
+So that I can see the world
+I want to see a map
+```
+```
+As a user,
+So that I am clear what a refugee is
+I want to see a definition of a Refugee.
+```
+```
+As a user,
+So that I can see troubled countries
+I want to see a pin in each of these countries
+```
+```
+As a user,
+So that I can understand why people are fleeing their home country
+I can click on the pin and see WHY they are leaving.
+```
+```
+As a user,
+So that I can understand why people are fleeing their home country
+I can click on the pin and see the AMOUNT of people leaving.
+```
+```
+As a user,
+So that I can help refugees
+I can click a link to take me to a relevant charity or petition
+```
 
-Things you may want to cover:
+<!-- # Domain Model
+<add image in here> -->
 
-* Ruby version
+## Getting started:
+Clone this repository and run:
+```
+bundle
+```
+## To set up the database's
+```
+rails db:create
+```
+```
+rails db:migrate
+```
+```
+rails db:seed
+```
 
-* System dependencies
+## To run tests:
+```
+rspec
+```
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## To run lining:
+```
+rubocop
+```
