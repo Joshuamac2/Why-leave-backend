@@ -23,8 +23,17 @@ RSpec.describe CountriesController do
     end
 
       it 'returns all countries' do
-          p JSON.parse(response.body)
         expect(JSON.parse(response.body).size).to eq(1)
       end
+
+      it "returns http success" do
+          expect(response).to have_http_status(:success)
+      end
+
+      it "JSON body response contains expected country attributes" do
+        json_response = JSON.parse(response.body)
+        expect(hash_body.keys).to match_array([:id, :country, :country_code, :population, :refugees, :asylum_seekers, :latitude, :longitude, :causes])
+      end
+
   end
 end
