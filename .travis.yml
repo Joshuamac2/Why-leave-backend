@@ -14,5 +14,5 @@ deploy:
   api_key:
     secure: "Kuv4jn01Ydqgg1tdCp8nNjBaVw3CEJ4vYhwEAFl7OuImAorwnlCzV+J0Fsa6wyCzkkhCdObGR9ppmP2XX47QC26aWV1gsU+pi2gPBwrc13UncQQqhdF+sgbwUv7rtu+/QZelCRzfjRHfoiTlWWMqERPBAgbeDMX/4OU8pRKnBz/6uMVqDq3e//fyDL5v/v+YQ4q/S0dxwcfEpcx9/Iqep+AWq7xVnE+JH7C7BYzHRdrOcmW/2NO8fp1j6+o76ONMnaCIPmO+95NZwraW06CMv1dW5Hq+8rFFQWN50ZB5iPTQKBDHpgbevZQTd4F+K0NirdiKTd8TXcEcMY0Esj9yEHJh8STh88E8HgkiUOEM3qZ2x2+tdJ+Ef/GNqpmEWpKTlLyzbuj1ghu9zGeQi8ZhM9/E5sz4joxyDgmPLD+91IsGAvkzM7ut0vdRSUiLViXstG+OyBw1aoHBr+M5tF+9BSYDUkG+/Su6wQRjhmcdBckhTVaiSNN73w+bdRZWsgZ3GxTSNBD5mrsq6aN8+ykRgkQ1Z8DCLWQ782kxpYP9O4uFqQgddOfcg8uwKEoiLlMssUvTARLWqBoDRmuxXm6JKPibAJ2nZKE/K+ix0ApNWvDiuC4f2UlzQK/hLiOSG89NZbZpyEGmQ40JeDzDLcwoyGsdpjhEoLdyGFgjWbKs4C4="
   app: why-leave
-  on:
-    repo: Joshuamac2/Why-leave-backend
+  # on:
+  #   repo: Joshuamac2/Why-leave-backend
