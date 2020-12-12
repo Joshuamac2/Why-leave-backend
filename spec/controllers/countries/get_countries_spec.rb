@@ -32,7 +32,7 @@ RSpec.describe CountriesController do
 
       it "JSON body response contains expected country attributes" do
         json_response = JSON.parse(response.body)
-        expect(hash_body.keys).to match_array([:id, :country, :country_code, :population, :refugees, :asylum_seekers, :latitude, :longitude, :causes])
+        expect(json_response[0].keys).to match_array(["id", "country", "country_code", "population", "refugees", "asylum_seekers", "latitude", "longitude", "causes"])
       end
 
   end
