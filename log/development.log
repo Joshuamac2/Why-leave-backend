@@ -1869,3 +1869,417 @@ FOREIGN KEY ("country_id")
   [1m[36mActiveRecord::InternalMetadata Load (6.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3355400041790027385)[0m
   [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-12-13 12:08:31 +0000
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/kamacbook/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/kamacbook/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.6ms | Allocations: 293)
+Completed 200 OK in 13ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 1534)
+
+
+Started GET "/" for ::1 at 2020-12-13 12:08:36 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/kamacbook/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/kamacbook/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.6ms | Allocations: 179)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 713)
+
+
+Started GET "/countries" for ::1 at 2020-12-13 12:08:37 +0000
+Processing by CountriesController#index as HTML
+  [1m[36mCountry Load (3.4ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:5:in `index'
+  [1m[36mCause Load (6.5ms)[0m  [1m[34mSELECT "causes".* FROM "causes" WHERE "causes"."country_id" = $1[0m  [["country_id", 1]]
+  ↳ app/controllers/countries_controller.rb:5:in `index'
+Completed 200 OK in 59ms (Views: 33.3ms | ActiveRecord: 18.8ms | Allocations: 14064)
+
+
+Started GET "/countries" for ::1 at 2020-12-13 12:08:41 +0000
+Processing by CountriesController#index as HTML
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:5:in `index'
+  [1m[36mCause Load (0.3ms)[0m  [1m[34mSELECT "causes".* FROM "causes" WHERE "causes"."country_id" = $1[0m  [["country_id", 1]]
+  ↳ app/controllers/countries_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.6ms | Allocations: 2030)
+
+
+Started GET "/" for ::1 at 2020-12-13 12:08:43 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/kamacbook/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/kamacbook/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 8)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 240)
+
+
+Started GET "/articles" for ::1 at 2020-12-13 12:08:43 +0000
+  
+SyntaxError (/Users/kamacbook/Documents/Makers/final_project/Why-leave-backend/app/controllers/articles_controller.rb:38: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/articles_controller.rb:38: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/articles_controller.rb:38: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/articles" for ::1 at 2020-12-13 12:09:53 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+Completed 500 Internal Server Error in 356ms (ActiveRecord: 0.0ms | Allocations: 4279)
+
+
+  
+ArgumentError (wrong number of arguments (given 7, expected 0..1)):
+  
+app/controllers/articles_controller.rb:7:in `block in index'
+app/controllers/articles_controller.rb:6:in `each'
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/articles" for ::1 at 2020-12-13 12:16:11 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (4.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:5:in `index'
+Completed 200 OK in 9ms (Views: 1.8ms | ActiveRecord: 5.1ms | Allocations: 2395)
+
+
+Started GET "/" for ::1 at 2020-12-13 12:31:49 +0000
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/kamacbook/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/kamacbook/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.4ms | Allocations: 293)
+Completed 200 OK in 13ms (Views: 9.8ms | ActiveRecord: 0.0ms | Allocations: 1534)
+
+
+Started GET "/" for ::1 at 2020-12-13 12:31:51 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/kamacbook/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/kamacbook/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 15.5ms | Allocations: 179)
+Completed 200 OK in 26ms (Views: 22.3ms | ActiveRecord: 0.0ms | Allocations: 713)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-12-13 12:31:51 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-12-13 12:31:54 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/kamacbook/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/kamacbook/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 8)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 240)
+
+
+Started GET "/countries" for ::1 at 2020-12-13 12:31:55 +0000
+Processing by CountriesController#index as HTML
+  [1m[36mCountry Load (1.0ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:5:in `index'
+  [1m[36mCause Load (0.3ms)[0m  [1m[34mSELECT "causes".* FROM "causes" WHERE "causes"."country_id" = $1[0m  [["country_id", 1]]
+  ↳ app/controllers/countries_controller.rb:5:in `index'
+Completed 200 OK in 58ms (Views: 40.5ms | ActiveRecord: 8.9ms | Allocations: 14017)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-12-13 12:31:55 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/countries" for ::1 at 2020-12-13 12:31:59 +0000
+Processing by CountriesController#index as HTML
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:5:in `index'
+  [1m[36mCause Load (0.2ms)[0m  [1m[34mSELECT "causes".* FROM "causes" WHERE "causes"."country_id" = $1[0m  [["country_id", 1]]
+  ↳ app/controllers/countries_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.5ms | Allocations: 2029)
+
+
+Started GET "/" for ::1 at 2020-12-13 12:32:00 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/kamacbook/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/kamacbook/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 8)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 239)
+
+
+Started GET "/articles" for ::1 at 2020-12-13 12:32:01 +0000
+Processing by ArticlesController#index as HTML
+Completed 200 OK in 356ms (Views: 43.7ms | ActiveRecord: 0.0ms | Allocations: 24232)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-12-13 12:32:02 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/articles" for ::1 at 2020-12-13 12:42:33 +0000
+Processing by ArticlesController#index as HTML
+Completed 500 Internal Server Error in 375ms (ActiveRecord: 0.0ms | Allocations: 5081)
+
+
+  
+NameError (uninitialized constant ArticlesController::NewsStory):
+  
+app/controllers/articles_controller.rb:7:in `block in index'
+app/controllers/articles_controller.rb:5:in `each'
+app/controllers/articles_controller.rb:5:in `index'
+Started GET "/articles" for ::1 at 2020-12-13 12:42:48 +0000
+Processing by ArticlesController#index as HTML
+Completed 500 Internal Server Error in 282ms (ActiveRecord: 0.0ms | Allocations: 3695)
+
+
+  
+ArgumentError (wrong number of arguments (given 7, expected 0..1)):
+  
+app/controllers/articles_controller.rb:7:in `block in index'
+app/controllers/articles_controller.rb:5:in `each'
+app/controllers/articles_controller.rb:5:in `index'
+Started GET "/articles" for ::1 at 2020-12-13 12:43:44 +0000
+Processing by ArticlesController#index as HTML
+Completed 200 OK in 319ms (Views: 32.6ms | ActiveRecord: 0.0ms | Allocations: 24234)
+
+
+Started GET "/articles/new" for ::1 at 2020-12-13 12:44:01 +0000
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"new"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 30)
+
+
+Started GET "/articles/1" for ::1 at 2020-12-13 12:44:01 +0000
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 26)
+
+
+Started GET "/articles/new" for ::1 at 2020-12-13 12:44:05 +0000
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"new"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 26)
+
+
+Started GET "/articles/1" for ::1 at 2020-12-13 12:44:06 +0000
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 26)
+
+
+Started GET "/articles/new" for ::1 at 2020-12-13 12:44:11 +0000
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"new"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 26)
+
+
+Started GET "/articles/1" for ::1 at 2020-12-13 12:44:11 +0000
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 26)
+
+
+Started GET "/articles" for ::1 at 2020-12-13 12:45:27 +0000
+Processing by ArticlesController#index as HTML
+Completed 200 OK in 356ms (Views: 40.9ms | ActiveRecord: 0.0ms | Allocations: 24079)
+
+
+Started GET "/articles" for ::1 at 2020-12-13 12:45:34 +0000
+Processing by ArticlesController#index as HTML
+Completed 200 OK in 412ms (Views: 38.5ms | ActiveRecord: 0.0ms | Allocations: 24060)
+
+
+Started GET "/articles" for ::1 at 2020-12-13 12:54:58 +0000
+Processing by ArticlesController#index as HTML
+Completed 500 Internal Server Error in 346ms (ActiveRecord: 0.0ms | Allocations: 3754)
+
+
+  
+ArgumentError (wrong number of arguments (given 7, expected 0..1)):
+  
+app/controllers/articles_controller.rb:7:in `block in index'
+app/controllers/articles_controller.rb:5:in `each'
+app/controllers/articles_controller.rb:5:in `index'
+Started GET "/articles" for ::1 at 2020-12-13 12:58:01 +0000
+Processing by ArticlesController#index as HTML
+Completed 200 OK in 623ms (Views: 31.5ms | ActiveRecord: 9.8ms | Allocations: 57461)
+
+
+Started GET "/articles/1" for ::1 at 2020-12-13 12:58:36 +0000
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 26)
+
+
+Started GET "/articles/new" for ::1 at 2020-12-13 12:58:41 +0000
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"new"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 26)
+
+
+Started GET "/articles" for ::1 at 2020-12-13 12:58:44 +0000
+Processing by ArticlesController#index as HTML
+Completed 200 OK in 367ms (Views: 32.0ms | ActiveRecord: 0.0ms | Allocations: 47202)
+
+
+Started GET "/articles/new" for ::1 at 2020-12-13 12:58:49 +0000
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"new"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 26)
+
+
+Started GET "/articles/new" for ::1 at 2020-12-13 12:58:53 +0000
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"new"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 26)
+
+
+Started GET "/articles/1" for ::1 at 2020-12-13 12:58:54 +0000
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 26)
+
+
+Started GET "/articles" for ::1 at 2020-12-13 13:01:49 +0000
+Processing by ArticlesController#index as HTML
+Completed 500 Internal Server Error in 565ms (ActiveRecord: 7.1ms | Allocations: 35696)
+
+
+  
+NameError (uninitialized constant ArticlesController::Articles):
+  
+app/controllers/articles_controller.rb:18:in `index'
+Started GET "/articles" for ::1 at 2020-12-13 13:02:15 +0000
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:19:in `index'
+Completed 200 OK in 341ms (Views: 1.4ms | ActiveRecord: 2.8ms | Allocations: 34683)
+
+
+Started GET "/articles" for ::1 at 2020-12-13 13:02:16 +0000
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:19:in `index'
+Completed 200 OK in 310ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 27154)
+
+
+Started GET "/articles" for ::1 at 2020-12-13 13:15:51 +0000
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:20:in `index'
+Completed 200 OK in 519ms (Views: 2.0ms | ActiveRecord: 0.8ms | Allocations: 34423)
+
+
+Started GET "/articles" for ::1 at 2020-12-13 13:17:21 +0000
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:21:in `index'
+Completed 200 OK in 382ms (Views: 1.0ms | ActiveRecord: 7.0ms | Allocations: 34426)
+
+
+Started GET "/articles" for ::1 at 2020-12-13 13:17:26 +0000
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:21:in `index'
+Completed 200 OK in 346ms (Views: 0.9ms | ActiveRecord: 0.3ms | Allocations: 26972)
+
+
+Started GET "/articles" for ::1 at 2020-12-13 13:18:17 +0000
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:21:in `index'
+Completed 200 OK in 527ms (Views: 1.0ms | ActiveRecord: 3.3ms | Allocations: 34516)
+
+
+Started GET "/articles" for ::1 at 2020-12-13 13:18:53 +0000
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:20:in `index'
+Completed 200 OK in 366ms (Views: 0.9ms | ActiveRecord: 2.8ms | Allocations: 34536)
+
+
+Started GET "/articles" for ::1 at 2020-12-13 13:19:04 +0000
+Processing by ArticlesController#index as HTML
+Completed 200 OK in 384ms (Views: 33.0ms | ActiveRecord: 2.5ms | Allocations: 54799)
+
+
+Started GET "/articles" for ::1 at 2020-12-13 13:58:52 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+Completed 200 OK in 408ms (Views: 30.1ms | ActiveRecord: 5.9ms | Allocations: 57793)
+
+
+Started GET "/articles" for ::1 at 2020-12-13 13:59:05 +0000
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:20:in `index'
+Completed 200 OK in 400ms (Views: 1.0ms | ActiveRecord: 2.7ms | Allocations: 34703)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCountry Create (12.2ms)[0m  [1m[32mINSERT INTO "countries" ("country", "country_code", "population", "refugees", "asylum_seekers", "latitude", "longitude") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["country", "Syrian Arab Republic"], ["country_code", "SYR"], ["population", 16900000], ["refugees", 6596627], ["asylum_seekers", 107621], ["latitude", 35.0], ["longitude", 38.0]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCause Create (4.4ms)[0m  [1m[32mINSERT INTO "causes" ("description", "date_started", "country_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["description", "Over 5.6 million refugees have fled Syria since 2011, seeking safety in Turkey, Lebanon, Jordan, Iraq, Egypt and beyond. After almost six years of war in Syria, refugee vulnerabilities and poverty are on the rise, the impact on host communities continues to grow, and funding for the humanitarian response is not keeping up with the needs"], ["date_started", "2011"], ["country_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/articles" for ::1 at 2020-12-13 14:01:09 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:20:in `index'
+Completed 200 OK in 474ms (Views: 1.1ms | ActiveRecord: 7.3ms | Allocations: 37672)
+
+
