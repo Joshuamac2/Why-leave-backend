@@ -1855,3 +1855,17 @@ puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
 puma (4.3.7) lib/puma/server.rb:472:in `process_client'
 puma (4.3.7) lib/puma/server.rb:328:in `block in run'
 puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3355400041790027385)[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateArticles (20201213103203)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (69.6ms)[0m  [1m[35mCREATE TABLE "articles" ("id" bigserial primary key, "headline" text, "trailText" text, "byline" character varying, "shortUrl" character varying, "thumbnail" character varying, "body" text, "bodyText" text, "country_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_8a9dd5009c"
+FOREIGN KEY ("country_id")
+  REFERENCES "countries" ("id")
+)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_articles_on_country_id" ON "articles"  ("country_id")[0m
+  [1m[36mprimary::SchemaMigration Create (23.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201213103203"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (6.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3355400041790027385)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m

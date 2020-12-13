@@ -1,3 +1,4 @@
 class Country < ApplicationRecord
   has_many :causes
-end 
+  has_many :articles
+end
