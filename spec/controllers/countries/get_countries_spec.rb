@@ -52,11 +52,12 @@ RSpec.describe CountriesController do
             date_started: "2011",
             country: syria
           )
-          get "/countries/#{syria.id}"
+          get :show, params: { id: syria.id }
         end
 
         it 'returns one country' do
-          expect(JSON.parse(response.body).size).to eq(1)
+          json_response = JSON.parse(response.body)
+          expect(json_response.keys).to match_array(["id", "country", "country_code", "population", "refugees", "asylum_seekers", "latitude", "longitude", "causes"])
         end
 
         it "returns http success" do

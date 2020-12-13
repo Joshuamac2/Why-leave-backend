@@ -21,7 +21,7 @@ class CountriesController < ApplicationController
 
   def show
     @country = Country.find(params[:id])
-    render json: @country, include: [:causes]
+    render json: @country, include: [:causes], except: [:migrants]
   end
 
 end
