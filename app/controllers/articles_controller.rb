@@ -17,7 +17,7 @@ class ArticlesController < ApplicationController
       )
     }
     @guardianNews = Article.all
-    render json: @guardianNews
+    render json: @articles
   end
 
   def show

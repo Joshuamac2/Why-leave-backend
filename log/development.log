@@ -2283,3 +2283,36 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 474ms (Views: 1.1ms | ActiveRecord: 7.3ms | Allocations: 37672)
 
 
+Started GET "/articles" for ::1 at 2020-12-13 14:06:15 +0000
+Processing by ArticlesController#index as HTML
+Completed 200 OK in 452ms (Views: 47.2ms | ActiveRecord: 3.8ms | Allocations: 54818)
+
+
+Started GET "/articles" for ::1 at 2020-12-13 14:10:55 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+Completed 500 Internal Server Error in 122ms (ActiveRecord: 0.0ms | Allocations: 1489)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/models/guardian.rb:9:in `news_story'
+app/controllers/articles_controller.rb:5:in `index'
+Started GET "/articles" for ::1 at 2020-12-13 14:12:25 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+Completed 500 Internal Server Error in 114ms (ActiveRecord: 0.0ms | Allocations: 1447)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/models/guardian.rb:9:in `news_story'
+app/controllers/articles_controller.rb:5:in `index'
+Started GET "/articles" for ::1 at 2020-12-13 14:18:01 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+Completed 200 OK in 432ms (Views: 42.7ms | ActiveRecord: 3.6ms | Allocations: 57957)
+
+
