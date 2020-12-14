@@ -48,6 +48,7 @@ RSpec.describe CausesController do
           country: syria
         )
         get :show, params: { id: syria_cause.id }
+        get :create
       end
 
       it "returns http success" do

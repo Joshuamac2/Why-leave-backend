@@ -52,6 +52,7 @@ RSpec.describe CountriesController do
             date_started: "2011",
             country: syria
           )
+          get :create
           get :show, params: { id: syria.id }
         end
 
