@@ -82,7 +82,7 @@ myanmar_cause = Cause.create(
 yemen = Country.create(
   country: "Yemen",
   country_code: "YEM",
-  population: ,
+  population: 29825964,
   refugees: 35132,
   asylum_seekers: 34028,
   latitude: 15,
@@ -93,6 +93,39 @@ yemen = Country.create(
   description: "A humanitarian catastrophe is unfolding in Yemen, as millions flee their homes to escape a devastating conflict. Fighting in Yemen, already one of the poorest countries in the Middle East, has severely compounded needs arising from long years of poverty and insecurity. The worsening violence has disrupted millions of lives, resulting in widespread casualties and massive displacement, and the situation is rapidly deteriorating. Civilians bear the brunt of the crisis, with 22.2 million Yemenis now in need of humanitarian assistance. Those forced to flee their homes are especially at risk. 2 million people now languish in desperate conditions, away from home and deprived of basic needs. The situation is so dire that almost 1 million displaced Yemenis have lost hope and tried to return home, even though it is not yet safe. Yemen is facing a humanitarian catastrophe. Without help, many more lives will be lost to violence, treatable illnesses or lack of food, water and shelter.",
   date_started: "2014",
   country: yemen
+)
+
+nigeria = Country.create(
+  country: "Nigeria",
+  country_code: "NGA",
+  population: 208555848,
+  refugees: 348637,
+  asylum_seekers: 76,430,
+  latitude: 10,
+  longitude: 8
+            )
+
+nigeria_cause = Cause.create(
+  description: "The Boko Haram insurgency has displaced nearly 2.4 million people in the Lake Chad Basin. Although the Nigerian military has regained control in parts of the country’s north-east, civilians in Nigeria, Cameroon, Chad and Niger continue to be affected by grave violations of human rights, widespread sexual and gender-based violence, forced recruitment and suicide bombings.In 2019, the Nigerian refugee crisis will be going into its sixth year. Since violent attacks of the Islamist group Boko Haram started to spill over Nigeria’s north-eastern frontier in 2014, Cameroon, Chad and Niger have been drawn into what has become a devastating regional conflict.The crisis has been exacerbated by conflict-induced food insecurity and severe malnutrition, which have risen to critical levels in all four countries. Despite the efforts of Governments and humanitarian aid in 2019, some 3.5 million people remain food insecure in the Lake Chad Basin region and will depend on assistance.",
+  date_started: "2013",
+  country: nigeria
+)
+
+
+iraq = Country.create(
+  country: "Iraq",
+  country_code: "IRQ",
+  population: 40222493,
+  refugees: 325485,
+  asylum_seekers: 292780,
+  latitude: 33,
+  longitude: 44
+            )
+
+iraq_cause = Cause.create(
+  description: "Millions of Iraqis have been forced to abandon their homes after decades of conflict and violence.Terrified, many fled; with just the clothes on their backs. Now, with their limited financial resources; exhausted by basic accommodation and food, they are in desperate need of emergency aid. More than 3 million Iraqis have been displaced across the country since the start of 2014 and over 260,000 are refugees in other countries. Mass executions, systematic rape and horrendous acts of violence are widespread, and human rights and rule of law are under constant attack. It is estimated that over 11 million Iraqis are currently in need of humanitarian assistance.",
+  date_started: "2003",
+  country: iraq
 )
 
 country_name = Country.create(
