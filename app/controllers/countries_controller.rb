@@ -1,9 +1,9 @@
 class CountriesController < ApplicationController
-  
-  def index 
+
+  def index
     @countries = Country.all
-    render json: @countries, include: [:causes]
-  end 
+    render json: @countries, include: [:causes], except: [:migrants]
+  end
 
   def create
     @country = Country.create(
@@ -17,11 +17,11 @@ class CountriesController < ApplicationController
       longitude: params[:longitude]
     )
     render json: @country
-  end 
+  end
 
   def show
     @country = Country.find(params[:id])
-    render json: @country, include: [:causes]
-  end 
+    render json: @country, include: [:causes], except: [:migrants]
+  end
 
-end 
+end
