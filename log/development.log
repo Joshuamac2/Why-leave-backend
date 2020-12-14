@@ -1855,6 +1855,42 @@ puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
 puma (4.3.7) lib/puma/server.rb:472:in `process_client'
 puma (4.3.7) lib/puma/server.rb:328:in `block in run'
 puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCountry Create (0.8ms)[0m  [1m[32mINSERT INTO "countries" ("country", "country_code", "population", "refugees", "asylum_seekers", "latitude", "longitude") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["country", "Syrian Arab Republic"], ["country_code", "SYR"], ["population", 16900000], ["refugees", 6596627], ["asylum_seekers", 107621], ["latitude", 35.0], ["longitude", 38.0]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCause Create (0.6ms)[0m  [1m[32mINSERT INTO "causes" ("description", "date_started", "country_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["description", "Over 5.6 million refugees have fled Syria since 2011, seeking safety in Turkey, Lebanon, Jordan, Iraq, Egypt and beyond. After almost six years of war in Syria, refugee vulnerabilities and poverty are on the rise, the impact on host communities continues to grow, and funding for the humanitarian response is not keeping up with the needs"], ["date_started", "2011"], ["country_id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCountry Create (25.3ms)[0m  [1m[32mINSERT INTO "countries" ("country", "country_code", "population", "refugees", "asylum_seekers", "latitude", "longitude") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["country", "Afghanistan"], ["country_code", "AFG"], ["population", 38928346], ["refugees", 2729148], ["asylum_seekers", 246228], ["latitude", 33.0], ["longitude", 65.0]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCause Create (0.3ms)[0m  [1m[32mINSERT INTO "causes" ("description", "date_started", "country_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["description", "More than 40 years after the Soviet invasion of Afghanistan in 1979, nearly 5 million Afghans remain displaced outside of the country. Of these, 90% are hosted by the Islamic Republics of Pakistan and Iran respectively. In addition, over 2 million Afghans are internally displaced today within their own country."], ["date_started", "1079"], ["country_id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2020-12-14 12:26:17 +0000
+  [1m[35m (25.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/maiara/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/maiara/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 35.3ms | Allocations: 293)
+Completed 200 OK in 53ms (Views: 41.9ms | ActiveRecord: 0.0ms | Allocations: 1534)
+
+
+Started GET "/countries" for ::1 at 2020-12-14 12:26:23 +0000
+Processing by CountriesController#index as HTML
+  [1m[36mCountry Load (32.5ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:5:in `index'
+  [1m[36mCause Load (0.8ms)[0m  [1m[34mSELECT "causes".* FROM "causes" WHERE "causes"."country_id" = $1[0m  [["country_id", 1]]
+  ↳ app/controllers/countries_controller.rb:5:in `index'
+  [1m[36mCause Load (2.7ms)[0m  [1m[34mSELECT "causes".* FROM "causes" WHERE "causes"."country_id" = $1[0m  [["country_id", 2]]
+  ↳ app/controllers/countries_controller.rb:5:in `index'
+  [1m[36mCause Load (0.4ms)[0m  [1m[34mSELECT "causes".* FROM "causes" WHERE "causes"."country_id" = $1[0m  [["country_id", 3]]
+  ↳ app/controllers/countries_controller.rb:5:in `index'
+Completed 200 OK in 222ms (Views: 92.6ms | ActiveRecord: 101.0ms | Allocations: 15869)
+
+
+
   [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[35m (5.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
@@ -1893,3 +1929,4 @@ Migrating to CreateCauses (20201209144159)
   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
   [1m[36mCause Create (5.7ms)[0m  [1m[32mINSERT INTO "causes" ("description", "date_started", "country_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["description", "Over 5.6 million refugees have fled Syria since 2011, seeking safety in Turkey, Lebanon, Jordan, Iraq, Egypt and beyond. After almost six years of war in Syria, refugee vulnerabilities and poverty are on the rise, the impact on host communities continues to grow, and funding for the humanitarian response is not keeping up with the needs"], ["date_started", "2011"], ["country_id", 1]]
   [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+

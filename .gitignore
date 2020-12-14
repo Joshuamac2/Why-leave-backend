@@ -27,5 +27,6 @@
 /config/master.key
 /tmp
 
+
 /coverage
 .env
