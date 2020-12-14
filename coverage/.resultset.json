@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/maiara/Desktop/Why-leave-backend/app/controllers/causes_controller.rb": {
+      "/Users/rebekahgalliano/Projects/Makers/WK11-12/why-leave-backend/app/controllers/causes_controller.rb": {
         "lines": [
           1,
           null,
@@ -27,7 +27,7 @@
           null
         ]
       },
-      "/Users/maiara/Desktop/Why-leave-backend/app/controllers/countries_controller.rb": {
+      "/Users/rebekahgalliano/Projects/Makers/WK11-12/why-leave-backend/app/controllers/countries_controller.rb": {
         "lines": [
           1,
           null,
@@ -59,6 +59,6 @@
         ]
       }
     },
-    "timestamp": 1607946386
+    "timestamp": 1607979635
   }
 }

@@ -1930,3 +1930,20 @@ Migrating to CreateCauses (20201209144159)
   [1m[36mCause Create (5.7ms)[0m  [1m[32mINSERT INTO "causes" ("description", "date_started", "country_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["description", "Over 5.6 million refugees have fled Syria since 2011, seeking safety in Turkey, Lebanon, Jordan, Iraq, Egypt and beyond. After almost six years of war in Syria, refugee vulnerabilities and poverty are on the rise, the impact on host communities continues to grow, and funding for the humanitarian response is not keeping up with the needs"], ["date_started", "2011"], ["country_id", 1]]
   [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
 
+Started GET "/" for ::1 at 2020-12-14 21:26:03 +0000
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/rebekahgalliano/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/rebekahgalliano/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 12.2ms | Allocations: 293)
+Completed 200 OK in 23ms (Views: 17.9ms | ActiveRecord: 0.0ms | Allocations: 1534)
+
+
+Started GET "/countries" for ::1 at 2020-12-14 21:26:21 +0000
+Processing by CountriesController#index as HTML
+  [1m[36mCountry Load (1.9ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:5:in `index'
+  [1m[36mCause Load (1.1ms)[0m  [1m[34mSELECT "causes".* FROM "causes" WHERE "causes"."country_id" = $1[0m  [["country_id", 1]]
+  ↳ app/controllers/countries_controller.rb:5:in `index'
+Completed 200 OK in 88ms (Views: 65.4ms | ActiveRecord: 14.7ms | Allocations: 13575)
+
+
