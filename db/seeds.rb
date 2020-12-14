@@ -128,18 +128,34 @@ iraq_cause = Cause.create(
   country: iraq
 )
 
-country_name = Country.create(
-  country: "",
-  country_code: "",
-  population: ,
-  refugees: ,
-  asylum_seekers: ,
-  latitude: ,
-  longitude:
-            )
+burundi = Country.create(
+  country: "Burundi",
+  country_code: "BDI",
+  population: 11890784,
+  refugees: 382360,
+  asylum_seekers: 54096,
+  latitude: -3.5,
+  longitude: 30
+  )
 
-country_cause = Cause.create(
-  description: "",
-  date_started: "",
-  country:
+burundi_cause = Cause.create(
+  description: "Political unrest in Burundi took a deadly turn in 2015 after the president announced plans to seek a third term. Street protests led to violent clashes, and hundreds of thousands fled to nearby countries in search of safety. The people of Burundi are facing a humanitarian crisis marked by economic decline, extreme food insecurity and a disease outbreak. While the worst of the violence has eased, the situation remains fragile, with an unresolved political situation and continued displacement within and outside the country.",
+  date_started: "2015",
+  country: burundi
+)
+
+ethiopia = Country.create(
+  country: "Ethiopia",
+  country_code: "ETH",
+  population: 114963588,
+  refugees: 93518,
+  asylum_seekers: 131969,
+  latitude: 8,
+  longitude: 38
+  )
+
+ethiopia_cause = Cause.create(
+  description: "Since the violence began in early-November 2020, refugees have been arriving at remote border points that take hours to reach from the nearest towns in Sudan. Many are women and children. Most left with barely any belongings and arrived exhausted from walking long distances over harsh terrain. With no end in sight to the conflict, the steady stream of daily arrivals is overwhelming the current capacity to provide aid. More support is urgently needed.",
+  date_started: "2020",
+  country: ethiopia
 )
