@@ -100,7 +100,7 @@ nigeria = Country.create(
   country_code: "NGA",
   population: 208555848,
   refugees: 348637,
-  asylum_seekers: 76,430,
+  asylum_seekers: 76430,
   latitude: 10,
   longitude: 8
             )
