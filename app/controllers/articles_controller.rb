@@ -5,6 +5,24 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    @search_term = params[:id]
+
+    @articles = Guardian.news_story(@search_term)
+
+    @articles.map { |i| i["fields"] }.each {
+      |news|
+      Article.create(
+        headline: news["headline"],
+        trailText: news["trailText"],
+        byline: news["byline"],
+        shortUrl: news["shortUrl"],
+        thumbnail: news["thumbnail"],
+        body: news["body"],
+        bodyText: news["bodyText"]
+      )
+    }
+
+    render json: @articles
 
   end
 
