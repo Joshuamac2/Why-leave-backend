@@ -27,3 +27,9 @@
 /config/master.key
 /tmp
 .env
+/coverage
+spec/.rails_helper.rb.icloud
+spec/.spec_helper.rb.icloud
+test/.test_helper 2.rb.icloud
+..rspec.icloud
+/log
