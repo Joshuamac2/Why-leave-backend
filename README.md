@@ -1,9 +1,16 @@
 # Why Leave?
 
+## About Project##
+
+Map of the world with ability to see what's going on in specific country in terms of human rights, abuses and to find information why people are actually fleeing home countries.  
+
+This repository is a bank end to this project :https://github.com/timcastillogill/Why_Leave_Front_End/tree/main
+
+It works as a API and database to store all information.
 
 
 
-# User Stories 
+# User Stories
 
 ```
 As a user,
@@ -65,5 +72,3 @@ rspec
 rubocop
 
 ```
-
-
