@@ -1,14 +1,12 @@
 # Why Leave?
 
-## About Project##
+## About Project
 
 Map of the world with ability to see what's going on in specific country in terms of human rights, abuses and to find information why people are actually fleeing home countries.  
 
-This repository is a bank end to this project :https://github.com/timcastillogill/Why_Leave_Front_End/tree/main
+This repository is a back-end to this project [here](https://github.com/timcastillogill/Why_Leave_Front_End/tree/main)
 
-It works as a API and database to store all information.
-
-
+The back-end works as a API that has a database what stores all information gathered from various sources.  
 
 # User Stories
 
@@ -43,11 +41,14 @@ So that I can help refugees
 I can click a link to take me to a relevant charity or petition
 ```
 
-<!-- # Domain Model
-<add image in here> -->
-
 ## Getting started:
-Clone this repository and run:
+Clone this repository and install the dependancies with the following:
+```
+git clone https://github.com/Joshuamac2/Why-leave-backend
+```
+```
+cd why-leave-backend
+```
 ```
 bundle
 ```
