@@ -44,7 +44,7 @@ I can click a link to take me to a relevant charity or petition
 ## Getting started:
 Clone this repository and install the dependancies with the following:
 ```
-git clone https://github.com/Joshuamac2/Why-leave-backend
+git clone git@github.com:Joshuamac2/Why-leave-backend.git
 ```
 ```
 cd why-leave-backend
