@@ -2,9 +2,9 @@
 
 ## About Project
 
-Map of the world with ability to see what's going on in specific country in terms of human rights, abuses and to find information why people are actually fleeing home countries.  
+An interactive map of the world with ability to see what's going on in specific countries in terms of human rights, abuses and information regarding why people are actually leaving their home countries.  
 
-This repository is a back-end to this project [here](https://github.com/timcastillogill/Why_Leave_Front_End/tree/main)
+This repository is a back-end, you can find the front-end [here](https://github.com/timcastillogill/Why_Leave_Front_End/tree/main)
 
 The back-end works as a API that has a database what stores all information gathered from various sources.  
 
